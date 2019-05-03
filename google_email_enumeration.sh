@@ -13,7 +13,7 @@ fi
 for i in $(cat $1);
 do
 	echo -n $i:
-	if [ -z "$(curl https://mail.google.com/mail/gxlu?email=$i -i -s| grep Set-Cookie:)" ];
+	if [ -z "$(curl https://mail.google.com/mail/gxlu?email=$i -i -s| grep -i Set-Cookie:)" ];
 	then 
 		echo FAIL;
 	else 
